@@ -1,0 +1,117 @@
+name: Project Submission
+description: Submit your Deep Learning in Remote Sensing project
+title: "[PROJECT]: "
+labels: ["project-submission", "student-work"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Project Submission for GEOI 525
+        
+        Use this template to submit your minor project for review.
+        
+  - type: input
+    id: student-name
+    attributes:
+      label: Student Name(s)
+      description: Enter the name(s) of the student(s) working on this project
+      placeholder: "e.g., John Doe, Jane Smith"
+    validations:
+      required: true
+      
+  - type: input
+    id: project-title
+    attributes:
+      label: Project Title
+      description: Provide a descriptive title for your project
+      placeholder: "e.g., Land Cover Classification using Sentinel-2 Imagery"
+    validations:
+      required: true
+      
+  - type: textarea
+    id: project-description
+    attributes:
+      label: Project Description
+      description: Provide a brief description of your project
+      placeholder: "Describe the objective, dataset, and approach..."
+    validations:
+      required: true
+      
+  - type: dropdown
+    id: project-type
+    attributes:
+      label: Project Type
+      description: Select the type of deep learning task
+      options:
+        - Image Classification
+        - Semantic Segmentation
+        - Object Detection
+        - Change Detection
+        - Time Series Analysis
+        - Other
+    validations:
+      required: true
+      
+  - type: textarea
+    id: dataset
+    attributes:
+      label: Dataset Information
+      description: Describe the dataset used (source, size, characteristics)
+      placeholder: "e.g., Sentinel-2 imagery, 10m resolution, 12 spectral bands..."
+    validations:
+      required: true
+      
+  - type: textarea
+    id: model-architecture
+    attributes:
+      label: Model Architecture
+      description: Describe the deep learning model(s) used
+      placeholder: "e.g., ResNet-50, U-Net, custom CNN..."
+    validations:
+      required: true
+      
+  - type: textarea
+    id: results
+    attributes:
+      label: Results
+      description: Summarize your results (metrics, visualizations)
+      placeholder: "e.g., Overall accuracy: 92%, F1-score: 0.89..."
+    validations:
+      required: true
+      
+  - type: input
+    id: repository-link
+    attributes:
+      label: Repository Link
+      description: Link to the repository containing your code
+      placeholder: "https://github.com/KU-GEOI-525-2023/your-project"
+    validations:
+      required: true
+      
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Submission Checklist
+      description: Ensure all items are completed before submission
+      options:
+        - label: Code is well-documented with comments and docstrings
+          required: true
+        - label: README.md includes project description, setup instructions, and results
+          required: true
+        - label: requirements.txt or environment.yml is included
+          required: true
+        - label: Results include visualizations and quantitative metrics
+          required: true
+        - label: Data sources are properly documented
+          required: true
+        - label: Code follows the contributing guidelines
+          required: true
+          
+  - type: textarea
+    id: additional-notes
+    attributes:
+      label: Additional Notes
+      description: Any additional information or challenges faced
+      placeholder: "Optional: Share any challenges, lessons learned, or future improvements..."
+    validations:
+      required: false
