@@ -10,6 +10,8 @@ jobs:
   lint:
     runs-on: ubuntu-latest
     name: Lint Python Code
+    permissions:
+      contents: read
     
     steps:
     - uses: actions/checkout@v3
@@ -38,6 +40,8 @@ jobs:
   test:
     runs-on: ubuntu-latest
     name: Run Tests
+    permissions:
+      contents: read
     
     steps:
     - uses: actions/checkout@v3
