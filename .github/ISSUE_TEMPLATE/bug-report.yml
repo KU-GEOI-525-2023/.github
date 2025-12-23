@@ -1,0 +1,87 @@
+name: Bug Report
+description: Report a bug or technical issue in the course materials or code
+title: "[BUG]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Bug Report
+        
+        Thanks for taking the time to report a bug! Please provide as much detail as possible.
+        
+  - type: textarea
+    id: bug-description
+    attributes:
+      label: Bug Description
+      description: A clear and concise description of what the bug is
+      placeholder: "Describe the bug..."
+    validations:
+      required: true
+      
+  - type: textarea
+    id: steps-to-reproduce
+    attributes:
+      label: Steps to Reproduce
+      description: Steps to reproduce the behavior
+      placeholder: |
+        1. Go to '...'
+        2. Run '...'
+        3. See error
+    validations:
+      required: true
+      
+  - type: textarea
+    id: expected-behavior
+    attributes:
+      label: Expected Behavior
+      description: What you expected to happen
+      placeholder: "Describe what you expected..."
+    validations:
+      required: true
+      
+  - type: textarea
+    id: actual-behavior
+    attributes:
+      label: Actual Behavior
+      description: What actually happened
+      placeholder: "Describe what actually happened..."
+    validations:
+      required: true
+      
+  - type: textarea
+    id: error-logs
+    attributes:
+      label: Error Logs
+      description: If applicable, add error messages or logs
+      placeholder: "Paste error logs here..."
+      render: shell
+    validations:
+      required: false
+      
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: Please provide information about your environment
+      placeholder: |
+        - OS: [e.g., Ubuntu 20.04]
+        - Python version: [e.g., 3.8.10]
+        - Deep learning framework: [e.g., PyTorch 1.9.0]
+        - CUDA version: [e.g., 11.1]
+      value: |
+        - OS: 
+        - Python version: 
+        - Deep learning framework: 
+        - CUDA version: 
+    validations:
+      required: true
+      
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional Context
+      description: Add any other context about the problem
+      placeholder: "Any additional information..."
+    validations:
+      required: false
